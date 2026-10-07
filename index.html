@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cut,user-scalable=no">
+<meta name="theme-color" content="#0b3d24"><title>Royal 21 — Blackjack</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="app">
+<header><div class="brand">ROYAL<span>21</span></div>
+<div class="bank">💰 <b id="bank">1000</b></div>
+<button id="snd" class="icon" aria-label="Sound">🔊</button><button id="statsBtn" class="icon" aria-label="Stats">📊</button></header>
+<main id="table">
+<div class="rules">BLACKJACK PAYS 3 TO 2 · DEALER HITS SOFT 17 · INSURANCE PAYS 2 TO 1</div>
+<div class="shoe" id="shoe">🂠<small id="shoeCt"></small></div>
+<section class="zone"><div class="label">Dealer <span id="dTot" class="tot"></span></div><div id="dealer" class="hand"></div></section>
+<div id="msg" class="msg">Place your bet</div>
+<section class="zone"><div id="hands" class="hands"></div></section>
+</main>
+<div id="hint" class="hint hidden"></div>
+<footer>
+<div id="betBar"><div class="betline">Bet: <b id="bet">0</b> <button id="clear" class="small">Clear</button><button id="rebet" class="small">Rebet</button></div>
+<div class="chips"><button class="chip c5" data-v="5">5</button><button class="chip c25" data-v="25">25</button><button class="chip c100" data-v="100">100</button><button class="chip c500" data-v="500">500</button></div>
+<button id="deal" class="big">DEAL</button></div>
+<div id="actBar" class="hidden"><button id="hit">Hit</button><button id="stand">Stand</button><button id="dbl">Double</button><button id="split">Split</button><button id="hintBtn" class="ghost">💡</button></div>
+<div id="insBar" class="hidden"><span>Insurance?</span><button id="insY">Yes</button><button id="insN">No</button></div>
+</footer>
+<div id="stats" class="modal hidden"><div class="card-panel"><h2>Stats</h2><div id="statBody"></div>
+<button id="reset" class="small danger">Reset bankroll & stats</button> <button id="closeStats" class="small">Close</button></div></div>
+</div><script src="app.js"></script></body></html>
